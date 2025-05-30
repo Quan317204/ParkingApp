@@ -1,0 +1,24 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ParkingApp.Views.StatsPage"
+             Title="Thống kê">
+    <VerticalStackLayout Padding="20">
+
+
+        <Label x:Name="CountLabel"
+               FontSize="20"
+               TextColor="DarkBlue"
+               Text="Số lượt xe vào hôm nay: ..." />
+        <Label x:Name="RevenueLabel1"
+               FontSize="20"
+               TextColor="RED"
+               Text="Số lượt xe ra hôm nay: 3" />
+
+
+        <Label x:Name="RevenueLabel"
+               FontSize="20"
+               TextColor="DarkGreen"
+               Text="Tổng doanh thu hôm nay: ..." />
+
+    </VerticalStackLayout>
+</ContentPage>

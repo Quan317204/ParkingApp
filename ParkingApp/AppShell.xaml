@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:views="clr-namespace:ParkingApp.Views"
+            x:Class="ParkingApp.AppShell">
+
+    <views:EntryPage Title="Vào bãi" />
+    <views:ExitPage Title="Ra bãi" />
+    <views:VehicleListPage Title="Xe đang gửi" />
+    <views:VehicleExitedPage Title="Xe đã rời bãi" />
+    <views:StatsPage Title="Thống kê" />
+</TabbedPage>

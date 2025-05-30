@@ -1,0 +1,59 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ParkingApp.Views.VehicleExitedPage"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             Title="Xe đã rời bãi">
+
+	<VerticalStackLayout Padding="10" Spacing="10">
+
+		<Label Text="Lọc theo:" FontAttributes="Bold" />
+
+		<HorizontalStackLayout Spacing="10">
+			<DatePicker x:Name="FilterDatePicker" Format="dd/MM/yyyy" />
+			<Button Text="Lọc ngày" Clicked="OnFilterByDateClicked" />
+		</HorizontalStackLayout>
+
+		<HorizontalStackLayout Spacing="10">
+			<Picker x:Name="MonthPicker" Title="Tháng">
+				<Picker.ItemsSource>
+					<x:Array Type="{x:Type x:Int32}">
+						<x:Int32>1</x:Int32>
+						<x:Int32>2</x:Int32>
+						<x:Int32>3</x:Int32>
+						<x:Int32>4</x:Int32>
+						<x:Int32>5</x:Int32>
+						<x:Int32>6</x:Int32>
+						<x:Int32>7</x:Int32>
+						<x:Int32>8</x:Int32>
+						<x:Int32>9</x:Int32>
+						<x:Int32>10</x:Int32>
+						<x:Int32>11</x:Int32>
+						<x:Int32>12</x:Int32>
+					</x:Array>
+				</Picker.ItemsSource>
+			</Picker>
+
+			<Picker x:Name="YearPicker" Title="Năm" />
+			<Button Text="Lọc tháng/năm" Clicked="OnFilterByMonthYearClicked" />
+		</HorizontalStackLayout>
+
+		<Button Text="Xem tất cả" Clicked="OnViewAllClicked" />
+
+		<CollectionView x:Name="ExitedVehiclesCollection" VerticalOptions="FillAndExpand">
+			<CollectionView.ItemTemplate>
+				<DataTemplate>
+					<Frame BorderColor="LightGray" Padding="10" Margin="5">
+						<VerticalStackLayout>
+							<Label Text="{Binding LicensePlate}" FontAttributes="Bold" />
+							<Label Text="{Binding ParkingSpot}" />
+							<Label Text="{Binding EntryTime, StringFormat='Vào: {0:HH:mm dd/MM/yyyy}'}" />
+							<Label Text="{Binding ExitTime, StringFormat='Ra: {0:HH:mm dd/MM/yyyy}'}" />
+							<Label Text="{Binding Fee, StringFormat='Phí: {0:N0} đ'}" TextColor="Green" />
+						</VerticalStackLayout>
+					</Frame>
+				</DataTemplate>
+			</CollectionView.ItemTemplate>
+		</CollectionView>
+
+	</VerticalStackLayout>
+</ContentPage>

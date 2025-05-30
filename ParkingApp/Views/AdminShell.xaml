@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:views="clr-namespace:ParkingApp.Views"
+       x:Class="ParkingApp.AdminShell">
+
+	<TabBar>
+		<ShellContent Title="Xe Vào" ContentTemplate="{DataTemplate views:EntryPage}" />
+		<ShellContent Title="Xe Ra" ContentTemplate="{DataTemplate views:ExitPage}" />
+		<ShellContent Title="Danh Sách" ContentTemplate="{DataTemplate views:VehicleListPage}" />
+		<ShellContent Title="Thống Kê" ContentTemplate="{DataTemplate views:StatsPage}" />
+	</TabBar>
+</Shell>
